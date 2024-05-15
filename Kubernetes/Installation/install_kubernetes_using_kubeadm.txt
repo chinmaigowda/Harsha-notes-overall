@@ -4,7 +4,7 @@ Kubernetes Installation
 	1. sudo apt update 
 	2. sudo apt-get install -y apt-transport-https
 	3. sudo su -
-	4. curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
+	4. curl -s -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg | apt-key add
 	5. echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' > /etc/apt/sources.list.d/kubernetes.list
 	6. exit from sudo 
 	7. sudo apt update 
